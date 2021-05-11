@@ -1,4 +1,4 @@
-@using Parcel.Models;
+@using Package.Models;
 
 <h1>Cool Ship Shipping Company</h1>
 
@@ -7,7 +7,7 @@
   <p>Create a shipping order... OR ELSE!!!</p>
 }
 <ul>
-  @foreach (Item item in Model)
+  @foreach (Parcel item in Model)
   {
     <li>@item.Description</li>
   }

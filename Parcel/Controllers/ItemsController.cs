@@ -1,29 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
-using Parcel.Models;
+using Package.Models;
 using System.Collections.Generic;
 
-namespace Parcel.Controllers
+namespace Package.Controllers
 {
-  public class ItemsController : Controller
+  public class ParcelController : Controller
   {
 
-    [HttpGet("/items")]
+    [HttpGet("/parcels")]
     public ActionResult Index()
     {
-      List<Item> allItems = Item.GetAll();
-      return View(allItems);
+      List<Parcel> allParcels = Parcel.GetAll();
+      return View(allParcels);
     }
 
-    [HttpGet("/items/new")]
+    [HttpGet("/parcels/new")]
     public ActionResult CreateForm()
     {
       return View();
     }
 
-    [HttpPost("/items")]
+    [HttpPost("/parcels")]
     public ActionResult Create(string description)
     {
-      Item myItem = new Item(description);
+      Parcel myParcel = new Parcel(description);
       return RedirectToAction("Index");
     }
 

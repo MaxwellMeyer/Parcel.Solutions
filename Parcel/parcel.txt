@@ -7,7 +7,7 @@
 
 4) Create CostToShip method that determines cost to ship shit based on formula we make up...
 
-5) Display the cost to ship, as well as volume and dimensions f*** yeah. 
+5) Display the cost to ship, as well as volume and dimensions f*** yeah 
 
 
 

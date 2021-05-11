@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 
-namespace Parcel.Models
+namespace Package.Models
 {
-  public class Item
+  public class Parcel
   {
     public string Description { get; set; }
-    private static List<Item> _instances = new List<Item> { };
+    private static List<Parcel> _instances = new List<Parcel> { };
 
-    public Item(string description)
+    public Parcel(string description)
     {
       Description = description;
       _instances.Add(this);
     }
 
-    public static List<Item> GetAll()
+    public static List<Parcel> GetAll()
     {
       return _instances;
     }

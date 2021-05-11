@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Package.Models;
 
-namespace Parcel.Controllers
+namespace Package.Controllers
 {
   public class HomeController : Controller
   {
@@ -8,21 +9,21 @@ namespace Parcel.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      Item starterItem = new Item("Add first item to To Do List");
-      return View(starterItem);
+      Parcel starterParcel = new Parcel("Add first Parcel to List");
+      return View(starterParcel);
     }
 
-    [HttpGet("/items/new")]
+    [HttpGet("/parcels/new")]
     public ActionResult CreateForm()
     {
       return View();
     }
 
-    [HttpPost("/items")]
+    [HttpPost("/parcels")]
     public ActionResult Create(string description)
     {
-      Item myItem = new Item(description);
-      return View("Index", myItem);
+      Parcel myParcel = new Parcel(description);
+      return View("Index", myParcel);
     }
 
   }
