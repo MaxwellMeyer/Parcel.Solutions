@@ -4,13 +4,13 @@ using TemplateNameSpace.Models;
 namespace TemplateNameSpace.Test
 {
   [TestClass]
-  public class TemplateTest
+  public class ParcelTests
   {
     [TestMethod]
-    public void TemplateConstructor_CreatesInstanceOfTemplate_Template()
+    public void ParcelConstructor_CreatesInstanceOfParcel_Parcel()
     {
-      Template newTemplate = new Template();
-      Assert.AreEqual(typeof(Template), newTemplate.GetType());
+      Parcel newParcel = new Parcel();
+      Assert.AreEqual(typeof(Parcel), newParcel.GetType());
     }
     // Tests
   }

@@ -1,0 +1,16 @@
+@using Parcel.Models;
+
+<h1>Cool Ship Shipping Company</h1>
+
+@if (Model.Count == 0)
+{
+  <p>Create a shipping order... OR ELSE!!!</p>
+}
+<ul>
+  @foreach (Item item in Model)
+  {
+    <li>@item.Description</li>
+  }
+</ul>
+
+<a href="/items/new">Add item... IF YOU DARE...</a>
